@@ -1,0 +1,196 @@
+/* ============================== home page */
+.login-page {
+    display: grid;
+    height: 100vh;
+    flex-direction: column;
+    justify-items: center;
+}
+
+// loading animation div
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 84%);
+    z-index: 20;
+}
+.loading > h3 {
+    color: var(--second-text-color);
+    margin: 20px;
+}
+.loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-right: 4px solid var(--second-text-color);
+    border-left: 4px solid transparent;
+    border-radius: 50%;
+    animation: loading-login 1s linear infinite;
+}
+.loading-animation-big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-right: 4px solid var(--second-text-color);
+    border-left: 4px solid transparent;
+    border-radius: 50%;
+    animation: loading-login-big 2s linear infinite;
+}
+
+.dote-animation {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--second-text-color);
+    animation: light 0.3s linear infinite;
+}
+// ===============================================================================
+/* Pages Section Start */
+.pages-content {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.page-h1 {
+    color: var(--main-color);
+    text-align: center;
+    margin: 10px;
+}
+/* =====+++++++++++=========== */
+.carousel-item img {
+    width: 400px !important;
+    height: 400 px !important;
+    margin: auto !important;
+}
+@media screen and (max-width: 867px) {
+    .carousel-item img {
+        width: 300px !important;
+        height: 300px !important;
+    }
+}
+@media screen and (max-width: 414px) {
+    .carousel-item img {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+.carousel-inner {
+    height: 440px;
+}
+@media screen and (max-width: 867px) {
+    .carousel-inner {
+        height: 350px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .carousel-inner {
+        height: 250px;
+    }
+}
+.carousel-caption {
+    background-color: rgba(228, 228, 227, 0.293);
+    width: 400px;
+    margin: auto;
+    margin-top: 100px !important;
+    border-radius: 15px;
+}
+.carousel-item > p,
+.carousel-item > h5 {
+    margin: auto;
+    width: 400px;
+    color: rgb(86, 81, 81);
+}
+.cap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+.capping-page-title {
+    width: 40%;
+}
+@media screen and (max-width: 414px) {
+    .capping-page-title {
+        width: 80%;
+    }
+}
+
+.slider-container {
+    height: 380px;
+}
+@media screen and (max-width: 786px) {
+    .slider-container {
+        height: 250px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .slider-container {
+        height: 150px;
+    }
+}
+.slider-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+}
+.mission {
+    animation: mission 4.2s linear;
+    padding: 20px;
+}
+.slider-img img {
+    width: 40%;
+    height: 40%;
+    padding: 2%;
+    transform: translate(10%);
+    animation: pictureSlide 2s linear;
+}
+.slider .mission > h1 {
+    color: var(--second-text-color);
+    text-shadow: 2px 2px 2px #276e54;
+    padding: 20px;
+}
+.slider-img p {
+    color: #6e6e6e;
+    line-height: 25px;
+    padding: 20px;
+}
+.vision {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+.vision img {
+    animation: vision 2s infinite;
+}
+.vision .vision-text > h1,
+.vision .vision-text > p {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: mission 4.2s linear;
+}
+.vision .vision-text > p {
+    line-height: 25px;
+}
+.vision .vision-text > h1 {
+    color: var(--second-text-color);
+    font-size: 40px;
+    text-shadow: 2px 2px 2px #276e54;
+}
+.vision > img {
+    width: 40%;
+    height: 40%;
+}
+
+/* Pages Section End */
+/* ========================================= */

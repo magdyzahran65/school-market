@@ -1,0 +1,125 @@
+/* header - login */
+.main-header-login {
+    // position: fixed;
+    // top: 0;
+    background-color: var(--main-color);
+    color: var(--main-text-color);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1px;
+    height: var(--h-header);
+    width: 100%;
+    z-index: 99999;
+}
+/* project name */
+.header-project {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    height: 100%;
+    margin: 0px 40px;
+}
+.logo-span {
+    display: flex;
+    align-items: center;
+}
+/* img */
+.logo-login {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 7px 3px white;
+}
+/* text */
+.header-project-name {
+    text-shadow: 3px 0px 1px rgb(77, 55, 15);
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.header-project-name::first-letter {
+    font-size: 35px;
+    color: var(--second-text-color);
+}
+
+@media screen and (max-width: 888px) {
+    .header-project {
+        margin: 0px 10px;
+        gap: 10px;
+    }
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+    .header-project-name {
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+    .header-project-name::first-letter {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .header-project-name {
+        font-size: 10px;
+        letter-spacing: 0px;
+        margin-bottom: 0;
+    }
+    .header-project-name::first-letter {
+        font-size: 14px;
+    }
+}
+/* project name end*/
+
+/* =======Nav====== */
+.login-nav {
+    margin: 0 20px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.login-nav li > a {
+    color: var(--main-text-color);
+    font-size: 18px;
+}
+.login-links li {
+    display: inline;
+    margin: 0 5px;
+}
+.login-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    height: 40px;
+    margin: 0;
+
+    justify-content: space-between;
+}
+.login-text a:hover {
+    color: #1ece8e;
+}
+.login-links li img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    border-bottom: #e85d04 2px solid;
+    box-shadow: 0px 0.5px 1.5px #e85d04;
+    padding: 5px;
+}
+.login-links li img:hover {
+    border: #1ece8e 1px solid;
+}
+@media screen and (max-width: 888px) {
+    .login-nav li > a {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .login-nav li > a {
+        font-size: 10px;
+    }
+}

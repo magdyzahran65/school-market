@@ -1,0 +1,12 @@
+/* body-container */
+.body-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 100%;
+    overflow: hidden;
+}
+.pages-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
+}

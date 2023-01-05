@@ -1,0 +1,27 @@
+.not-found-page {
+    margin: auto;
+    width: 600px;
+    height: 100%;
+    text-align: center;
+    margin-top: 200px;
+}
+.not-found-title {
+    // text-decoration: underline;
+    color: rgb(134, 91, 91);
+    margin: 40px 0;
+}
+.not-found-msg {
+    color: rgb(108, 105, 105);
+    .oops {
+        color: red;
+    }
+}
+.router-link-active {
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 20px;
+    color: Green;
+    &:hover {
+        color: orange;
+    }
+}

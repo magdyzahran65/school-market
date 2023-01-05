@@ -1,0 +1,346 @@
+// add-user Container Start =============
+.add-user-container {
+    background-color: rgba(221, 221, 221, 0.572);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// add-user - box
+.add-user {
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 75%;
+    height: 75%;
+    z-index: 100;
+    overflow: auto;
+}
+// add-user Container End ==============
+
+// ======= Add User Header Start =======
+.add-user-header {
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    border-bottom: 2px solid gray;
+}
+.add-user-close {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0;
+
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.add-user-done {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0;
+
+    position: absolute;
+    top: -50px;
+    right: 16px;
+}
+// heading -h1
+.add-user-heading {
+    text-align: center;
+    color: rgb(196, 209, 78);
+
+    font-size: 25px;
+    padding-top: 10px;
+}
+// ======= Add User Header End ========
+
+// ===========add-user-Body Start ==========
+.add-user-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+.add-user-body {
+    margin-top: 10px;
+}
+.add-name {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.add-name input {
+    box-shadow: 1px 1px 2px gray;
+
+    color: rgb(114, 111, 111);
+    padding-bottom: 0px;
+}
+@media screen and (max-width: 500px) {
+    .add-user-form {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        .add-name {
+            width: 100%;
+            margin: 8px;
+            margin-bottom: 5px;
+        }
+    }
+}
+.add-name .arabic-name {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="70" height="30"><text x="5" y="11" style="font: bold 10px Arial;fill:gray;">Arabic-name</text></svg>')
+        no-repeat;
+    border-radius: 5px;
+    padding: 2px 10px;
+    width: 80%;
+
+    overflow: hidden;
+    font-size: 13px;
+    text-align: right;
+}
+.add-name .arabic-name:focus {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="65" height="20"><text x="5" y="10"  style="font:  9px Arial;fill:green;" >Arabic-name:</text></svg>')
+        no-repeat;
+    transition: all 0.15s ease-in-out;
+}
+.add-name input::placeholder {
+    text-align: start;
+}
+.user-name-country {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    .country-span {
+        margin-top: 10px;
+    }
+}
+.add-name .english-name {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"  width="70" height="30"><text  x="5" y="11" style="font: bold 10px Arial;fill:gray;">English-name</text></svg>')
+        no-repeat;
+}
+.add-name .english-name:focus {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="65" height="20"><text x="5" y="10"  style="font:  9px Arial;fill:green;" >English-name:</text></svg>')
+        no-repeat;
+    transition: all 0.15s ease-in-out;
+}
+.undefined-name {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="85" height="30"><text x="4" y="12" style="font: bold 10px Arial;fill:gray;">Undefined-name</text></svg>')
+        no-repeat;
+}
+.undefined-name:focus {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="65" height="20"><text x="5" y="10"  style="font:  9px Arial;fill:green;" >Undefined-name:</text></svg>')
+        no-repeat;
+    transition: all 0.15s ease-in-out;
+}
+
+.user-name {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="85" height="30"><text x="4" y="12" style="font: bold 10px Arial;fill:gray;">User-name</text></svg>')
+        no-repeat;
+}
+.user-name:focus {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="65" height="20"><text x="5" y="10"  style="font:  9px Arial;fill:green;" >User-name:</text></svg>')
+        no-repeat;
+    transition: all 0.15s ease-in-out;
+}
+.user-email {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="85" height="30"><text x="4" y="12" style="font: bold 10px Arial;fill:gray;">Email</text></svg>')
+        no-repeat;
+}
+.user-email:focus {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="65" height="20"><text x="5" y="10"  style="font:  9px Arial;fill:green;" >Email:</text></svg>')
+        no-repeat;
+    transition: all 0.15s ease-in-out;
+}
+.user-password {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="85" height="30"><text x="4" y="12" style="font: bold 10px Arial;fill:gray;">Password</text></svg>')
+        no-repeat;
+}
+.user-password:focus {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="65" height="20"><text x="5" y="10"  style="font:  9px Arial;fill:green;" >Password:</text></svg>')
+        no-repeat;
+    transition: all 0.15s ease-in-out;
+}
+.monthly-purchase-limit {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="30"><text x="4" y="12" style="font: bold 10px Arial;fill:gray;">Monthly-purchase-limit</text></svg>')
+        no-repeat;
+}
+.monthly-purchase-limit:focus {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="20"><text x="5" y="10"  style="font:  9px Arial;fill:green;" >Monthly-purchase-limit:</text></svg>')
+        no-repeat;
+    transition: all 0.15s ease-in-out;
+}
+.daily-purchase-limit {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="30"><text x="4" y="12" style="font: bold 10px Arial;fill:gray;">Daily-purchase-limit</text></svg>')
+        no-repeat;
+}
+.daily-purchase-limit:focus {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="20"><text x="5" y="10"  style="font:  9px Arial;fill:green;" >Daily-purchase-limit:</text></svg>')
+        no-repeat;
+    transition: all 0.15s ease-in-out;
+}
+
+.add-name .english-name,
+.arabic-name,
+.undefined-name,
+.user-email,
+.user-password,
+.monthly-purchase-limit,
+.daily-purchase-limit,
+.user-name {
+    text-align: left;
+    border-radius: 5px;
+    padding: 2px 10px;
+    width: 80%;
+
+    overflow: hidden;
+    font-size: 13px;
+    height: 40px;
+}
+.english-name::placeholder,
+.arabic-name::placeholder,
+.undefined-name::placeholder,
+.user-email::placeholder,
+.user-password::placeholder,
+.user-name::placeholder {
+    text-align: center;
+    font-size: 10px;
+}
+// ============= VueINputComponent Start =====================
+#vue-phone {
+    text-align: left;
+    border-radius: 5px;
+    padding: 2px 10px;
+    width: 90%;
+
+    font-size: 13px;
+}
+
+#vue-phone-70_phone_number {
+    padding: 0 !important;
+}
+.country-selector__label {
+    padding: 0 !important;
+}
+
+.input-tel__input {
+    padding: 0 !important;
+}
+.select-country-container {
+    width: 40%;
+}
+// ============= VueINputComponent End =====================
+.notes {
+    width: 100%;
+    height: 40px;
+    overflow: auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    resize: none;
+}
+.text-notes {
+    display: flex;
+    margin: 0 18px;
+    width: 92%;
+}
+.add-amount {
+    margin-top: 20px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+fieldset {
+    display: flex;
+    margin: 0 10px;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid rgb(192, 192, 192);
+
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+    .add-amount {
+        width: 100%;
+        margin: 8px;
+        margin-bottom: 5px;
+    }
+    .daily-purchase-limit {
+        width: 80%;
+        margin: 10px;
+        & label {
+            margin: 20px;
+        }
+    }
+    .monthly-purchase-limit {
+        width: 80%;
+    }
+}
+
+// ===========add-user-Body End ==========
+
+.add-user-form-img {
+    margin: 0 auto;
+    width: 50%;
+    // border: 1px double gray;
+    background-color: white;
+
+    & input {
+        color: gray;
+        background-color: #ddd;
+    }
+    .add-user-input-img {
+        width: 50px;
+        margin: 0 40%;
+    }
+    .img-input-file {
+        color: white;
+        background-color: var(--second-text-color);
+        border: 1px solid limegreen;
+        border-radius: 5px;
+        margin-bottom: 25px;
+        cursor: pointer;
+    }
+    .img-input-file::before {
+        content: " Add Photo :";
+        color: white;
+        padding: 0 10px;
+    }
+    .img-input-file::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+}
+.reset-btn {
+    height: 40px;
+    padding: 5px;
+    padding-top: 0;
+    margin: 5px;
+    margin-top: 60px;
+    text-align: center;
+}
+@media screen and (max-width: 767px) {
+    .reset-btn {
+        // margin-top: 0px;
+        // margin: 0 20%;
+        position: absolute;
+        bottom: 18px;
+        left: 0;
+        .add-user-form-img {
+            width: 65%;
+        }
+    }
+}
+@media screen and (max-width: 414px) {
+    .reset-btn {
+        margin-top: 0px;
+    }
+    .add-user-form-img {
+        width: 80%;
+        margin: 50px 20%;
+    }
+}

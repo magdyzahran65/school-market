@@ -1,0 +1,146 @@
+<!-- this is Vue x Store index  -->
+
+<!-- 1st States -->
+<!-- 2nd Getters -->
+<!-- 3rd MUtations -->
+<!-- 4th Actions -->
+<!-- ====================== -->
+
+<!-- ======================================================================================
+ 1st stats : 
+ ============
+ --- you can store Data here For Global to Any Component,,,,,,,,,,,
+
+*** How to Call Data From Stage :=>
+====================================
+in index.js in store folder : =>
+
+state:state: {                        <---- An Object
+        Data: [                       <--- An Array Of Objects
+            { name: "Mohamed", age: 36, Department: "HTML", salary: 3000 },
+            { name: "Magdy", age: 35, Department: "CSS", salary: 6000 },
+            { name: "Ali", age: 36, Department: "JS", salary: 8000 },
+        ],
+
+in component.vue,
+=================
+*********
+<h1 v-for="(item , index) in newData">
+    {{ item.name }}    
+</h1>
+
+will return names of every Object
+
+computed :{
+    newData(){
+        return this.$store.stats.data;  <-- Get Data from Store State Data
+        // you can Now Print Data Object
+    }
+}
+********
+=====================================================================
+===================================================================== -->
+
+<!-- 2nd Getters  -->
+
+<!-- 
+    you can Edit Data Before Print by Using Getters :
+getters: {
+        modifiedInfo: (state) => {
+            let infoPerson = state.names.map((x) => {
+                return {
+                    name: "Mr : " + x.name,
+                    age: "Age : " + x.age,
+                    Department: "Department : " + x.Department,
+                    salary: "Salary : " + x.salary,
+                };
+            });
+            return infoPerson;
+        },
+    },
+
+    in component.vue =>
+computed : {
+    
+    modifiedInfos() {
+        return this.$store.getters.modifiedInfo;
+    },
+    <h3 class="text-center" v-for="(modifiedInfo, key) in modifiedInfos" :key="key">
+            {{ modifiedInfo.name }} <br />
+            {{ modifiedInfo.age }} <br />
+            {{ modifiedInfo.Department }}
+            {{ modifiedInfo.salary }}
+    </h3>
+}
+will Print all Data Proprieties (with your Editing)
+
+========================================================================
+======================================================================== -->
+
+
+<!-- 
+3rd Mutations : 
+ ============
+ --- you can store functions here For Global to Any Component,,,,,,,,,,,
+
+*** How to commit Functions From Mutations :=>
+====================================
+in index.js in store folder : =>
+
+mutations: {                 <---- An Object
+   increasesSalary: (state) => {             <---- function addToSalary
+            return state.names.forEach((x) => {
+                return (x.salary += 200);
+            });
+        },                     
+}
+
+in component.vue,
+=================
+*********
+<button @click="addToSalary()">Add To Salary</button>
+
+will return names of every Object
+VIP = > commit ==> will Commit Functions From store mutations : {};
+methods: {
+    addToSalary() {
+        // ***** this is/ =commit= function from = $store Mutations= ***
+        this.$store.commit("increasesSalary"); <--- ==this increaseSalary Came Form (Mutation in store)==
+    },
+},
+**** with mutations when You reload page will get The Original Values Of Property so ,.... 
+will you Can Use Mutations For Functions Will Commit like Filter or function you need it once
+====================================================================================-->
+
+<!-- 
+4th Actions 
+ ==== when you need function to ==== Add , Edit Or Delete on Data ===
+===========
+// ============= in this Example Will Use setTimeout() As waiting  response From Api  ===========
+ 
+on mutation:{} we will write the function And Actions Will =Commit= it (Not The Component Methods:{})
+mutations:{
+    subFromSalary: (state) => {
+            return state.names.forEach((x) => {
+                return (x.salary -= 100);
+            });
+        },
+}
+actions: {
+        subFromSalary: (context) => {
+            return setTimeout(function () {  // == setTimeOut () to simulate the Server Response Time ==
+                context.commit("subFromSalary"); //  <=== this will commit the function in ==  mutations ==
+            }, 3000);
+        },
+    },
+    in the Component in methods:{} :
+    ===============================
+    subFromSalary() {
+        //  == dispatch use to event The Actions Functions ==
+
+            this.$store.dispatch("subFromSalary");
+        },
+
+        when You Click Btn (Sub From Salary) will decrease Salary after 2000 ms in data Value
+
+ ==============================================================================================-->

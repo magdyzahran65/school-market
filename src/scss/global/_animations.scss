@@ -1,0 +1,92 @@
+/* animations */
+
+@keyframes pictureSlide {
+    0% {
+        transform: translate(-200%);
+    }
+}
+@keyframes mission {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes vision {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    /* 50% {
+        transform: rotate(10deg);
+    } */
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+// login Animation
+@keyframes loading-login {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes loading-login-big {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes light {
+    0% {
+        opacity: 0;
+        background-color: var(--second-text-color);
+    }
+    100% {
+        opacity: 1;
+        background-color: greenyellow;
+    }
+}
+
+// system pages
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+// router-view nested pages animations =>
+@keyframes turnPage {
+    0% {
+        transform: translateX(-80%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes turnPage-leave {
+    0% {
+        transform: translateX(0%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(100%);
+
+        // opacity: 0;
+    }
+}

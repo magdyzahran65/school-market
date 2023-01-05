@@ -1,0 +1,27 @@
+/* Footer Start */
+.login-footer {
+    background-color: var(--main-color);
+    color: var(--main-text-color);
+    /* check style over-write footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1px;
+    width: 100%;
+}
+// .login-footer .copyright {
+//     font-size: 14px;
+// }
+@media screen and (max-width: 867px) {
+    .login-footer .login-copyright {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 414px) {
+    .login-footer .login-copyright {
+        font-size: 10px;
+    }
+}
+
+/* Footer End */

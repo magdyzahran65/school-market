@@ -1,0 +1,38 @@
+// google fonts
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+// font awesome icons
+@import url("@fortawesome/fontawesome-svg-core/styles.css");
+
+// globals
+@import "./global/reset";
+
+// Animations
+@import "./global/animations";
+
+// Variables
+@import "./variables/variables";
+
+// components
+// @import "./components/sidebar";
+@import "./components/header-app";
+@import "./components/footer";
+@import "./components/testing";
+@import "./pages-components/home-page/login-form";
+
+// pages components
+@import "pages-components/home-page/login-page";
+@import "pages-components/system-page";
+
+// system pages
+@import "./pages-components/system-nested-pages/students.scss";
+
+// system pages
+@import "./pages-components/system-nested-pages/body-container.scss";
+@import "./pages-components/system-nested-pages/system-sidebar.scss";
+@import "./pages-components/system-nested-pages/system-header.scss";
+@import "./pages-components/system-nested-pages/system-footer.scss";
+@import "./pages-components/not-found-page.scss";
+
+// header system forms and drop menus
+@import "./pages-components/add-user-form/add-user-form.scss";

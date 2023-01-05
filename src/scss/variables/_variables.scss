@@ -1,0 +1,36 @@
+:root {
+    /* sizing Variables */
+
+    /* layout grid */
+    --layout-rows: var(--h-page-contents);
+    --w-header: 1fr;
+    --h-header: 50px;
+    --h-page-contents: 1fr;
+    --h-footer: 50px;
+    /* layout End */
+    --h-page: calc(100vh - var(--h-header) - var(--h-footer));
+    --h-students-page: calc(100% - var(--h-header) - var(--h-footer));
+
+    /* app-login layout */
+    .layout-container {
+        display: grid;
+        grid-template-columns: var(--w-header);
+        grid-template-rows: var(--layout-rows) auto;
+    }
+
+    /* layout End */
+
+    /* =============--------================= */
+    // sidebar
+
+    --w-sidebar: 250px;
+
+    // =====================================================================
+
+    /* Colors Variables */
+    --main-color: #e85d04;
+    // --main-color: #656564;
+
+    --main-text-color: white;
+    --second-text-color: #1ece8e;
+}

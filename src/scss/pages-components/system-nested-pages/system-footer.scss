@@ -1,0 +1,25 @@
+.system-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e85d04;
+
+    color: rgb(255, 255, 255);
+
+    margin: 0 1px;
+}
+.system-footer .copyright {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+@media screen and (max-width: 867px) {
+    .system-footer .copyright {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .system-footer .copyright {
+        font-size: 10px;
+    }
+}
