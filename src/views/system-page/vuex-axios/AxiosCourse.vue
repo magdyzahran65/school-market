@@ -7,6 +7,7 @@
             <button @click="post()" class="btn btn-success m-1 mt-3">
                 Post
             </button>
+
             <button @click="update" class="btn btn-warning m-1 mt-3">
                 Put/Patch
             </button>
